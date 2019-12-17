@@ -1,0 +1,6 @@
+/* File: hello.ch
+   Print 'Hello, world' on the screen. */
+
+printf("Hello, world.\n");
+printf("My name is Matthew.\n\n");
+printf("I ate a burrito and carrots.\n");
