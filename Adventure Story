@@ -1,0 +1,431 @@
+/* File: aDvENtUreStORy.ch
+   A long piece of code consisting of...
+   - 2% void statements
+   - 5% if-else statments
+   - 2% variables
+   - 90% printf statements */
+   
+// The story runs neater when played at full screen. :)
+   
+// Variables
+int luck;
+int creeperDMG;
+string_t Player1;
+string_t Player2;
+string_t preIntroans;
+string_t introans;
+string_t optionOneans;
+string_t optionTwoans;
+string_t optionThreeans;
+
+
+// Story Roadmap
+void storyRoadMap(){
+    printf("\n");
+    printf("*Your goal is to kill\n");
+    printf("the Ender Dragon.\n\n");
+    sleep(2);
+    printf("                  ---------- Minecraft World -----------\n");
+    printf("                  |                 |                  |\n");
+    printf("                  |                 |                  |\n");
+    printf("        --- Find village. ---       |            Gather food\n");
+    printf("        |         |         |       |           and materials.\n");
+    printf("      Loot.     Fight.   Retreat.   |            |     |     |\n");
+    printf("        |         |         |       |         Explore  |  Go fish.\n");
+    printf("Slain by zombie.  |    Starve to death.       forest.  |     |\n");
+    printf("                  |                 |          |       |     ----\n");
+    printf("             Survive mobs           |          |  Build house.  |\n");
+    printf("         and kill Ender Dragon.     |      ---------   |        ----\n");
+    printf("                                    |      |       |   |           |\n");
+    printf("                                    |  Die to   Survive and        |\n");
+    printf("                                    |  Creeper. kill Ender Dragon. |\n");
+    printf("                                    |                              |\n");
+    printf("                       --- Find cave and mine. ---               --------------\n");
+    printf("                       |            |            |               |            |\n");
+    printf("                 Exit cave, and     |     Dig straight down.     |            |\n");
+    printf("             settle with iron gear. |                 |      Slain by         |\n");
+    printf("               |                    |                 |   Elder Guardian.     |\n");
+    printf("               |              Explore deeper.         |                       |\n");
+    printf("        Found stronghold,           |           Swim in lava.           Find epic loot\n");
+    printf("    and killed Ender Dragon.        |                                and kill Ender Dragon.\n");
+    printf("                              Suffocate in\n");
+    printf("                             pile of gravel.\n");
+}
+
+// Introduction
+void preIntro(){
+    do{
+    printf("\n");
+    printf("Before the story begins, would you like to see the roadmap for the storyline?\n");
+    printf("Enter Y or N.\n");
+    scanf("%s", &preIntroans);
+    }while(preIntroans != "Y" && preIntroans != "N");
+}
+        
+void intro(){
+    printf("\n");
+    printf("You are a professional Minecraft Twitch streamer known as _________.\n");
+    scanf("%s", &Player1);
+    printf("One day, as you were playing Hardcore mode with _________,\n");
+    scanf("%s", &Player2);
+    printf("your PC began to glitch and flash brightly.\n");
+    sleep(2);
+    printf("Moments later, you got pulled into the computer and you realize that you are in the Minecraft world.\n");
+    sleep(3);
+    printf("In order to escape, you must journey to the End and kill the Ender Dragon, with only one life.\n");
+    sleep(3);
+    printf("You have all stone tools and you are stranded in a huge plains biome.\n\n");
+    sleep(2);
+    do{
+        printf("\n");
+        printf("What would you like to do during the day?\n");
+        printf("A: Search for a village.\n");
+        printf("B: Find a cave and mine.\n");
+        printf("C: Gather food and above-ground materials.\n");
+        scanf("%s", &introans);
+    }while(introans != "A" && introans != "B" && introans != "C");
+}
+
+// Option 1
+void optionOne(){
+    printf("\n");
+    printf("After running around all day, you eventually found a village in the distance.\n");
+    sleep(2);
+    printf("As the evening was about to transition to night, you're glad to find sactuary at a perfect time.\n");
+    sleep(3);
+    printf("You bolt towards the village, but notice somehthing amiss.\n");
+    sleep(2);
+    printf("It turns out the village is under an onslaught of zombies and skeletons (30).\n");
+    sleep(2);
+    printf("Presently, you have no armor or food, but you have a Bow and a Stone Sword to fight.\n\n");
+    sleep(2);
+    do{
+    printf("\n");
+    printf("What should you do?\n");
+    printf("A: Loot the village.\n");
+    printf("B: Fight the group of mobs.\n");
+    printf("C: Retreat.\n");
+    scanf("%s", &optionOneans);
+    }while(optionOneans != "A" && optionOneans != "B" && optionOneans != "C");
+}
+
+// End 1
+void endOne(){
+    printf("\n");
+    printf("Evading the rampage of mobs, you attempt to break into villager homes to scavenge what's available.\n");
+    sleep(3);
+    printf("However in doing so, most of the houses were empty and you managed to find 3 pieces of bread and mushroom stew at most.\n");
+    sleep(4);
+    printf("While many villagers managed to stay safe in the buildings, you stood in the center of the riot.\n");
+    sleep(3);
+    printf("The mobs from all around eventually see you and start to attack you.\n");
+    sleep(2);
+    printf("Trying to recover your health by stuffing yourself with food, you were simply outnumbered and died.\n\n");
+    sleep(3);
+    printf("%s was slain by Zombie.\n", Player1);
+}
+
+// End 2
+void endTwo(){
+    printf("\n");
+    printf("Although you knew this was not your fight, you decided to do the noble thing and charged straight into action.\n");
+    sleep(3);
+    printf("Several monsters surrounded you and all you could do was hack and slash through the crowd.\n");
+    sleep(3);
+    printf("As the villagers noticed your efforts, they choose to help you by calling three Iron Golems by your side.\n");
+    sleep(3);
+    printf("The sound of arrows flying and heavy metal clashing filled the scene.\n");
+    sleep(2);
+    printf("When the dust cleared and the mobs were finished, the village honored you as hero of the village.\n");
+    sleep(3);
+    printf("From your efforts, you were given a full set of armor and better weaponry, where the villagers guided you to the stronghold.\n");
+    sleep(3);
+    printf("200 arrow shots later, you defeated the Ender Dragon, finishing the game and returning to the real world.\n\n");
+    sleep(3);
+    printf("YOU WIN\n");
+}
+
+// End 3
+void endThree(){
+    printf("\n");
+    printf("Afraid that you won't make it out alive, you decide to retreat before the mobs catch sight of you.\n");
+    sleep(3);
+    printf("You ran for a good while, attempting to find sanctuary for the night.\n");
+    sleep(2);
+    printf("However, you find out that you're starving and have no food available to you.\n");
+    sleep(2);
+    printf("Desparate for food, you attempt to search for animals around you, but there's none to be found.\n");
+    sleep(3);
+    printf("Your hunger bar drains to zero and you slowly die of starvation.\n\n");
+    sleep(2);
+    printf("%s starved to death.\n", Player1);
+}
+
+
+// Option 2
+void optionTwo(){
+    printf("\n");
+    printf("Luckily, you managed to find a cave after 10 minutes of searching.\n");
+    sleep(2);
+    printf("It's about early afternoon, so you have a good amount of time to mine.\n");
+    sleep(2);
+    printf("As you dove into the cave, you find a good amount of iron.\n");
+    sleep(2);
+    printf("Ideally, you want to find diamonds and gear yourself as best as possible.\n");
+    sleep(2);
+    printf("However, you remember that you need to find the stronghold as well.\n\n");
+    sleep(2);
+    do{
+    printf("\n");
+    printf("What do you want to do?\n");
+    printf("A: Settle with iron gear and exit the cave.\n");
+    printf("B: Explore deeper into the cave.\n");
+    printf("C: Dig straight down.\n");
+    scanf("%s", &optionTwoans);
+    }while(optionTwoans != "A" && optionTwoans != "B" && optionTwoans != "C");
+}
+
+// End 4
+void endFour(){
+    printf("\n");
+    printf("After suiting up, you resurface from the cave and attempt to search for the stronghold.\n");
+    sleep(3);
+    printf("However, nighttime has settled and monsters begin to spawn.\n");
+    sleep(2);
+    printf("You also have to search for food, in which you managed to find some berries in a nearby forest.\n");
+    sleep(3);
+    printf("You searched for several days and nights, always on the move, and living off whatever you found.\n");
+    sleep(3);
+    printf("After about two weeks, you find a village and dig into the stronghold.\n");
+    sleep(2);
+    printf("As your gear was decent, but not optimal, you fought the Ender Dragon with much struggle.\n");
+    sleep(3);
+    printf("Badly wounded and barely alive, you beat the game and returned to the real world.\n\n");
+    sleep(3);
+    printf("YOU WIN\n");
+}
+
+// End 5
+void endFive(){
+    printf("\n");
+    printf("Hoping to prepare yourself as best as possible, you attempt to find diamonds by plunging deep in the cave.\n");
+    sleep(4);
+    printf("Through many twists and turns, you find yourself lost in an underground labrynth.\n");
+    sleep(3);
+    printf("After what seemed like forever, you find diamonds, but with no food and no way out.\n");
+    sleep(3);
+    printf("You lost your way to the surface and you used all of your resources for mining.\n");
+    sleep(3);
+    printf("Attempting to dig upwards, a huge pile of gravel blocks collapsed onto you and left you unable to move.\n\n");
+    sleep(4);
+    printf("%s suffocated in a wall.\n", Player1);
+    
+}
+
+// End 6
+void endSix(){
+    printf("\n");
+    printf("Although you are aware of Minecraft's #1 rule, you decide to dig straight down.\n");
+    sleep(3);
+    printf("You wish to return home soon, so you believe this is the best way possible.\n");
+    sleep(3);
+    printf("Without hesitation, you plunge deeper underground, one block closer to bedrock each time.\n");
+    sleep(3);
+    printf("You find some iron and gold along the walls of your tunnel, but you still hope to find diamonds quickly.\n");
+    sleep(4);
+    printf("One block later, you fall into a pit of lava and burned to death.\n");
+    sleep(2);
+    printf("The worst part was realizing there was a pile of diamonds literally five blocks in front of you.\n");
+    sleep(3);
+    printf("wHy diD YoU DiG sTrAIgHt dOWn\n\n");
+    sleep(2);
+    printf("%s tried to swim in lava.\n", Player1);
+}
+
+
+// Option 3
+void optionThree(){
+    printf("\n");
+    printf("Knowing you can't do other things without basic materials, you decide to hunt and gather to give yourself better chances.\n");
+    sleep(4);
+    printf("Not too far from where you were, you find a relatively dense forest with animals and trees to harvest.\n");
+    sleep(4);
+    printf("Going into late afternoon, you earned enough resources to last for a week.\n");
+    sleep(3);
+    printf("At this point, you can focus on other priorities and don't have to worry about much.\n");
+    sleep(3);
+    printf("It's about a couple hours before nightfall and you wonder what's next.\n\n");
+    sleep(3);
+    do{
+    printf("\n");
+    printf("What should you do?\n");
+    printf("A: Continue exploring the forest.\n");
+    printf("B: Build a house to live in.\n");
+    printf("C: Go fishing.\n");
+    scanf("%d", &optionThreeans);
+    }while(optionThreeans != "A" && optionThreeans != "B" && optionThreeans != "C");
+}
+
+// End 7
+void endSeven(){
+    printf("\n");
+    printf("With nothing else in mind, you decide to take a stroll into the forest to explore.\n");
+    sleep(3);
+    printf("Further within, the forest grows dense and it starts to become dark and shady.\n");
+    sleep(3);
+    printf("At some point, it became utterly quiet and you were centered in the middle of the woods.\n");
+    sleep(3);
+    printf("Somehow, you found your friend, %s, who was also gathering materials.\n", Player2);
+    sleep(3);
+    printf("While you were conversing with %s, you heard something start to sizzle behind both of you.\n", Player2);
+    sleep(3);
+    printf("\n");
+    printf("BOOM\n");
+    sleep(2);
+    creeperDMG = randint(18,20);
+    printf("The creeper exploded and dealt %d DMG.\n", creeperDMG);
+    printf("\n");
+    sleep(2);
+}
+
+void endSurvive(){
+    printf("Somehow, you survived the explosion, but barely alive.\n");
+    sleep(2);
+    printf("However when the dust cleared, you notice that...\n");
+    sleep(2);
+    printf("%s blew up.\n", Player2);
+    sleep(2);
+    printf("For some reason, you look at %s's loot and find stacks of diamond blocks and golden apples.\n", Player2);
+    sleep(3);
+    printf("Feeling lucky that %s was previously in Creative mode, you take the items and use them to kill the Ender Dragon.\n\n", Player2);
+    sleep(4);
+    printf("YOU WIN\n");
+}
+
+void endCreeperAwMan(){
+    printf("%s was slain by Creeper.\n", Player2);
+    printf("%s was slain by Creeper.\n", Player1);
+    sleep(1);
+    printf("CREEPER\n");
+    sleep(2);
+    printf("AW MAN\n");
+}
+
+// End 8
+void endEight(){
+    printf("\n");
+    printf("With having a good supply of wood, you decide to build a house.\n");
+    sleep(2);
+    printf("The house will not be too big or too small, but good enough to shelter yourself at night.\n");
+    sleep(3);
+    printf("It was late evening by the time you finished, which was a perfect time to stay inside.\n");
+    sleep(3);
+    printf("One day later, you woke up to the sight of the peaceful plains and you feel at ease with the place around you.\n");
+    sleep(4);
+    printf("You actually find it cool to be living inside a game and decide to settle here for awhile.\n");
+    sleep(3);
+    printf("Days, weeks, then eventually months flew by, where you find that you've embarked on multiple journeys.\n");
+    sleep(4);
+    printf("You built new settlements, traveled the Nether, mined to riches, and even defeated the Ender Dragon.\n");
+    sleep(4);
+    printf("You find out that you actually want to stay in the game and continue your progress in the new world.\n");
+    sleep(4);
+    printf("By the time you returned, you realize 20 years have passed.\n\n");
+    sleep(3);
+    printf("YOU WIN\n");
+}
+
+// End 9
+void endNine(){
+    printf("\n");
+    printf("As you probably heard that fishing can provide food and even rare gear and items, you start looking for the nearest ocean.\n");
+    sleep(4);
+    printf("After 5 minutes, you notice the large body of water and prepare to fish.\n");
+    sleep(3);
+    printf("You also notice that there is an ocean monument with possible treasures below the surface.\n");
+    sleep(3);
+    printf("At this point, your luck could turn either way, so you throw your line far towards the monument.\n");
+    sleep(3);
+    luck = randint(0,10);
+}
+
+void endUnluckyNine(){
+    printf("After a few hours, evening has struck and at most, you only find a few edible fish.\n");
+    sleep(3);
+    printf("Staring dissappointedly at the stack of pufferfish and glass bottles, you are still eager to find treasure.\n");
+    sleep(4);
+    printf("However, your luck has gone so negative that you actually reel in an Ocean Elder Guardian.\n");
+    sleep(3);
+    printf("Unprepared for the turn of events, you lost to the monster and died.\n\n");
+    sleep(3);
+    printf("%s was slain by Elder Guardian.\n", Player1);
+}
+
+void endLuckyNine(){
+    printf("About a half hour later, you managed to capture a couple enchanted books and caught a huge supply of fish.\n");
+    sleep(4);
+    printf("Wanting more, you continued fishing and even reeled in some diamond blocks, which you used to craft your gear.\n");
+    sleep(4);
+    printf("While you thought you couldn't feel any luckier, you also fished in the Eye of Ender, perfect to locate the stronghold.\n");
+    sleep(4);
+    printf("Wrapped in fully enchanted diamond gear, you march to the stronghold with upmost confidence.\n");
+    sleep(3);
+    printf("With the power of a Sharpness X diamond sword, you slaughtered the dragon and returned home as an epic gamer.\n\n");
+    sleep(4);
+    printf("YOU WIN\n");
+}
+
+// Story
+int main(){
+    preIntro();
+    if(preIntroans == "Y"){
+        storyRoadMap();
+    }
+    intro();
+    if(introans == "A"){
+        optionOne();
+        if(optionOneans == "A"){
+            endOne();
+        }
+        if(optionOneans == "B"){
+            endTwo();
+        }
+        if(optionOneans == "C"){
+            endThree();
+        }
+    }
+    if(introans == "B"){
+        optionTwo();
+        if(optionTwoans == "A"){
+            endFour();
+        }
+        if(optionTwoans == "B"){
+            endFive();
+        }
+        if(optionTwoans == "C"){
+            endSix();
+        }
+    }
+    if(introans == "C"){
+        optionThree();
+        if(optionThreeans == "A"){
+            endSeven();
+            if(creeperDMG == 20){
+                endCreeperAwMan();
+            }else{
+                endSurvive();
+            }
+        }
+        if(optionThreeans == "B"){
+            endEight();
+        }
+        if(optionThreeans == "C"){
+            endNine();
+            if(luck < 5){
+                endUnluckyNine();
+            }else{
+                endLuckyNine();
+            }
+        }
+    }
+}
