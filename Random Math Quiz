@@ -1,0 +1,19 @@
+/* File: randommathquiz.ch
+   Gives the user 10 addition problems. */
+
+int x, y, ans, problem = 0, correct = 0;
+
+while(problem < 10){
+    x = randint(1, 10);
+    y = randint(1, 10);
+    problem = problem + 1;
+    printf("%d. What is %d + %d?\n", problem, x, y);
+    scanf("%d", &ans);
+    if(x + y == ans){
+        correct = correct + 1;
+    }
+}
+printf("You got %d out of %d correct.\n", correct, problem);
+if(correct > 8){
+    printf("Nice, you're pretty good at math.\n");
+}
